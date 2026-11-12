@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#17222C">
+<title>Материалы для кровли, фасада и забора</title>
+<meta name="description" content="Демонстрационный макет лендинга магазина стройматериалов: кровля, фасад, заборы. Расчёт сметы по заявке.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;700;800&family=Onest:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* Hallmark · macrostructure: Workbench-lite (split hero + bento directions) · tone: utilitarian
+   theme: custom "Оцинковка" (paper cool-light · steel ink · signal orange accent) · fonts: Geologica + Onest (Cyrillic, OFL)
+   pre-emit critique: P4 H4 E4 S4 R4 V4 */
+:root{
+  --color-paper:#EDF0F2;
+  --color-paper-2:#E1E6EA;
+  --color-card:#FFFFFF;
+  --color-ink:#131C24;
+  --color-steel:#4D5C69;
+  --color-line:#C3CCD3;
+  --color-accent:#C2410C;
+  --color-accent-hover:#A33608;
+  --color-dark:#17222C;
+  --color-dark-2:#22313D;
+  --color-on-dark:#E8EDF0;
+  --color-on-dark-mute:#A9B6C0;
+  --color-focus:#0B5FFF;
+  --color-mark:#8F7212;
+  --color-error:#B42318;
+  --font-display:"Geologica","Segoe UI",system-ui,sans-serif;
+  --font-body:"Onest","Segoe UI",system-ui,sans-serif;
+  --space-xs:4px;--space-sm:8px;--space-md:16px;--space-lg:24px;--space-xl:40px;--space-2xl:72px;--space-3xl:112px;
+  --text-sm:.9rem;--text-base:1.0625rem;--text-lg:1.25rem;--text-xl:clamp(1.5rem,1.1rem + 1.6vw,2.25rem);--text-display:clamp(2.1rem,1.2rem + 4.2vw,4.1rem);
+  --radius-sm:6px;--radius-md:10px;
+  --ease-out:cubic-bezier(.2,.7,.2,1);--dur-fast:140ms;--dur-med:240ms;
+  --rule:1px solid var(--color-line);
+  --gutter:max(16px, env(safe-area-inset-left), env(safe-area-inset-right));
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--font-display);font-style:normal;line-height:1.08;letter-spacing:-.015em;margin:0;overflow-wrap:anywhere;min-width:0}
+h1{font-size:var(--text-display);font-weight:800}
+h2{font-size:var(--text-xl);font-weight:700}
+h3{font-size:var(--text-lg);font-weight:700;line-height:1.2}
+p{margin:0}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 2*var(--gutter));margin-inline:auto}
+.mark{color:var(--color-mark);font-weight:600}
+:focus-visible{outline:3px solid var(--color-focus);outline-offset:2px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 var(--space-lg);border:0;border-radius:var(--radius-sm);background:var(--color-accent);color:#fff;font:600 1rem var(--font-body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background var(--dur-fast) var(--ease-out),transform var(--dur-fast) var(--ease-out)}
+.btn:hover{background:var(--color-accent-hover)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{background:var(--color-line);color:var(--color-steel);cursor:not-allowed}
+.btn--line{background:transparent;color:var(--color-ink);box-shadow:inset 0 0 0 1.5px var(--color-ink)}
+.btn--line:hover{background:var(--color-ink);color:var(--color-paper)}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:var(--color-paper);border-bottom:var(--rule);padding-top:env(safe-area-inset-top)}
+.top .wrap{display:flex;align-items:center;gap:var(--space-lg);min-height:64px}
+.brand{font:800 1.15rem var(--font-display);text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:var(--space-lg);margin-left:auto}
+.top nav a{text-decoration:none;color:var(--color-steel);font-weight:500;white-space:nowrap}
+.top nav a:hover{color:var(--color-ink)}
+.top .tel{font-weight:600;text-decoration:none;white-space:nowrap}
+
+/* hero */
+.hero{padding-block:var(--space-2xl) var(--space-3xl)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--space-xl);align-items:stretch}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:var(--space-lg);padding-block:var(--space-lg)}
+.hero-copy p{font-size:var(--text-lg);color:var(--color-steel);max-width:34em}
+.hero-facts{display:flex;flex-wrap:wrap;gap:var(--space-sm) var(--space-lg);padding:0;margin:0;list-style:none;font-weight:500}
+.hero-facts li::before{content:"";display:inline-block;width:.55em;height:.55em;background:var(--color-accent);margin-right:.6em;transform:translateY(-.05em)}
+.hero-photo{position:relative;border-radius:var(--radius-md);overflow:hidden;min-height:520px;background:var(--color-paper-2)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.calc{position:absolute;left:var(--space-md);right:var(--space-md);bottom:var(--space-md);background:var(--color-card);border-radius:var(--radius-md);padding:var(--space-lg);box-shadow:0 10px 30px rgba(19,28,36,.22)}
+.calc h2{font-size:1.25rem;margin-bottom:var(--space-md)}
+
+/* form */
+.fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-md)}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-weight:600;font-size:var(--text-sm)}
+input[type=text],input[type=tel],select{width:100%;min-height:48px;padding:0 14px;border:1.5px solid var(--color-line);border-radius:var(--radius-sm);background:var(--color-paper);font:500 1rem var(--font-body);color:var(--color-ink)}
+input:focus,select:focus{outline:3px solid var(--color-focus);outline-offset:1px;border-color:var(--color-focus)}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:.85rem;color:var(--color-steel);line-height:1.45}
+.consent input{flex:none;width:22px;height:22px;margin:1px 0 0;accent-color:var(--color-accent)}
+.consent a{color:var(--color-ink)}
+.form-note{font-size:.85rem;min-height:1.2em}
+.form-note.err{color:var(--color-error)}
+.form-note.ok{color:var(--color-ink);font-weight:600}
+
+/* sections */
+section{padding-block:var(--space-3xl)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-md);margin-bottom:var(--space-xl);max-width:46rem}
+.sec-head p{color:var(--color-steel);font-size:var(--text-lg)}
+
+/* directions - bento */
+.dirs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--space-md)}
+.dir{position:relative;background:var(--color-card);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;border:var(--rule)}
+.dir figure{margin:0;overflow:hidden;background:var(--color-paper-2)}
+.dir img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+.dir:hover img{transform:scale(1.03)}
+.dir-body{padding:var(--space-lg);display:flex;flex-direction:column;gap:var(--space-md);flex:1}
+.dir ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.dir li{display:flex;justify-content:space-between;gap:var(--space-md);padding-bottom:10px;border-bottom:var(--rule);font-weight:500}
+.dir li:last-child{border-bottom:0;padding-bottom:0}
+.dir li span{color:var(--color-steel);font-weight:400;text-align:right}
+.dir--roof{grid-column:span 4;flex-direction:row}
+.dir--roof figure{flex:0 0 38%}
+.dir--tile{grid-column:span 2}
+.dir--tile figure{aspect-ratio:3/2}
+.dir--facade{grid-column:span 3}
+.dir--fence{grid-column:span 3}
+.dir--facade figure,.dir--fence figure{aspect-ratio:16/9}
+
+/* steps */
+.steps-band{background:var(--color-dark);color:var(--color-on-dark)}
+.steps-band .sec-head p{color:var(--color-on-dark-mute)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-lg);list-style:none;margin:0;padding:0}
+.steps li{display:flex;flex-direction:column;gap:var(--space-md);padding-top:var(--space-lg);border-top:1.5px solid var(--color-dark-2)}
+.ico{width:52px;height:52px;border-radius:50%;background:var(--color-dark-2);display:grid;place-items:center;color:var(--color-on-dark)}
+.ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.steps p{color:var(--color-on-dark-mute);font-size:var(--text-sm)}
+.steps h3{color:var(--color-on-dark)}
+.steps .mark{color:#E3C458}
+
+/* faq */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--space-2xl);align-items:start}
+details{border-bottom:var(--rule);padding:var(--space-md) 0}
+details:first-of-type{border-top:var(--rule)}
+summary{cursor:pointer;font:700 1.08rem var(--font-display);list-style:none;display:flex;justify-content:space-between;gap:var(--space-md);min-height:44px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 1.6rem var(--font-body);color:var(--color-accent);flex:none}
+details[open] summary::after{content:"\2212"}
+details p{padding:var(--space-sm) 0 var(--space-sm);color:var(--color-steel);max-width:40em}
+
+/* contacts */
+.contacts{background:var(--color-paper-2)}
+.contacts .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--space-2xl);align-items:start}
+.contact-list{display:grid;gap:var(--space-lg);margin-top:var(--space-lg)}
+.contact-list dt{font-weight:600;font-size:var(--text-sm);color:var(--color-steel)}
+.contact-list dd{margin:2px 0 0;font-weight:500;font-size:var(--text-lg)}
+.msgs{display:flex;flex-wrap:wrap;gap:var(--space-sm)}
+.msg{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:var(--radius-sm);box-shadow:inset 0 0 0 1.5px var(--color-ink);text-decoration:none;font-weight:600;white-space:nowrap}
+.msg:hover{background:var(--color-ink);color:var(--color-paper)}
+.form-card{background:var(--color-card);border-radius:var(--radius-md);padding:var(--space-xl);border:var(--rule)}
+.form-card h3{margin-bottom:var(--space-md)}
+
+footer{background:var(--color-dark);color:var(--color-on-dark-mute);padding-block:var(--space-xl) calc(var(--space-xl) + env(safe-area-inset-bottom));font-size:var(--text-sm)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:var(--space-md) var(--space-xl);justify-content:space-between}
+footer a{color:var(--color-on-dark)}
+
+/* reveal: one moment only - hero load */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>*{animation:rise .7s var(--ease-out) both}
+  .hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* tablet / phone */
+@media (max-width:980px){
+  .top nav{display:none}
+  .top .tel{margin-left:auto}
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero-photo{min-height:0}
+  .hero-photo img{position:static;height:300px}
+  .calc{position:static;box-shadow:none;border-radius:0 0 var(--radius-md) var(--radius-md)}
+  .dirs{grid-template-columns:minmax(0,1fr)}
+  .dir--roof,.dir--tile,.dir--facade,.dir--fence{grid-column:auto}
+  .dir--roof{flex-direction:column}
+  .dir--roof figure{flex:none;height:240px}
+  .steps{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .faq,.contacts .wrap{grid-template-columns:minmax(0,1fr);gap:var(--space-xl)}
+  section{padding-block:var(--space-2xl)}
+}
+@media (max-width:560px){
+  .top .wrap{gap:var(--space-md)}
+  .top .btn{display:none}
+  .fields{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .calc,.form-card{padding:var(--space-md)}
+  .hero{padding-block:var(--space-lg) var(--space-2xl)}
+  .hero-copy{padding-block:0}
+  .btn{white-space:normal;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Название компании <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span></a>
+    <nav aria-label="Разделы">
+      <a href="#napravleniya">Направления</a>
+      <a href="#kak">Как заказать</a>
+      <a href="#voprosy">Вопросы</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="tel" href="tel:+78888888888">+7 (888) 888-88-88</a>
+    <a class="btn" href="#raschet">Рассчитать смету</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="padding-block-start:var(--space-2xl)">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Кровля, фасад и забор для вашего дома</h1>
+      <p>Подберём материалы под размеры вашего дома и участка, посчитаем смету и привезём на объект. Расчёт бесплатный.</p>
+      <ul class="hero-facts">
+        <li>Смета по вашим размерам</li>
+        <li>Доставка на объект <span class="mark">&lt;&lt;запросить у заказчика: регионы, сроки&gt;&gt;</span></li>
+        <li>Ответим в мессенджере</li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn" href="#raschet">Получить расчёт</a>
+        <a class="btn btn--line" href="#napravleniya">Что у нас есть</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="assets/krovlya.jpg" alt="Фальцевая металлическая кровля с мансардным окном" width="1600" height="1067" fetchpriority="high">
+      <form class="calc" id="raschet" novalidate>
+        <h2>Расчёт сметы за один день</h2>
+        <div class="fields">
+          <div class="field">
+            <label for="what">Что нужно</label>
+            <select id="what" name="what">
+              <option>Кровля</option><option>Фасад</option><option>Забор</option><option>Всё вместе</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="size">Площадь или размеры</label>
+            <input id="size" name="size" type="text" placeholder="например, крыша 120 м²" autocomplete="off">
+          </div>
+          <div class="field full">
+            <label for="tel">Телефон</label>
+            <input id="tel" name="tel" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+          </div>
+          <label class="consent full">
+            <input type="checkbox" id="agree" name="agree">
+            <span>Даю согласие на обработку персональных данных и принимаю <a href="politika.html">политику обработки данных</a>.</span>
+          </label>
+          <div class="field full">
+            <button class="btn" type="submit" id="send" disabled>Отправить заявку</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="napravleniya" style="padding-block-start:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Три направления, один склад</h2>
+      <p>Всё, что нужно, чтобы закрыть дом сверху, обшить снаружи и огородить участок. Состав ассортимента и цены <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span>.</p>
+    </div>
+    <div class="dirs">
+      <article class="dir dir--roof">
+        <figure><img src="assets/metall.jpg" alt="Металлическая кровля крупным планом" loading="lazy" width="1600" height="2405"></figure>
+        <div class="dir-body">
+          <h3>Кровля</h3>
+          <ul>
+            <li>Металлочерепица <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Профнастил <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Фальцевая кровля <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Водосточные системы <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Доборные элементы и крепёж <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+          </ul>
+          <a class="btn btn--line" href="#raschet" style="align-self:flex-start">Рассчитать кровлю</a>
+        </div>
+      </article>
+
+      <article class="dir dir--tile">
+        <figure><img src="assets/cherepica.jpg" alt="Коричневая кровельная черепица" loading="lazy" width="1600" height="1067"></figure>
+        <div class="dir-body">
+          <h3>Гибкая и керамическая черепица</h3>
+          <p style="color:var(--color-steel)">Для крыш сложной формы. Наличие и цена <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+        </div>
+      </article>
+
+      <article class="dir dir--facade">
+        <figure><img src="assets/fasad.jpg" alt="Фасад частного дома с деревянными панелями" loading="lazy" width="1600" height="1200" style="object-position:50% 38%"></figure>
+        <div class="dir-body">
+          <h3>Фасад</h3>
+          <ul>
+            <li>Сайдинг <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Фасадные панели <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Утеплитель и плёнки <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="dir dir--fence">
+        <figure><img src="assets/zabor.jpg" alt="Деревянный забор с калиткой" loading="lazy" width="1600" height="1067"></figure>
+        <div class="dir-body">
+          <h3>Забор</h3>
+          <ul>
+            <li>Профнастил для забора <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Евроштакетник <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+            <li>Столбы, ворота, калитки <span>от <b class="mark">&lt;&lt;цена&gt;&gt;</b></span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="steps-band" id="kak">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Как заказать</h2>
+      <p>От заявки до материалов на участке четыре шага. Сроки каждого шага <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span>.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span>
+        <h3>Пишете нам</h3>
+        <p>Оставляете заявку на сайте или пишете в мессенджер: что нужно и какие размеры.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2m4 0h2M8 16h2m4 0h2"/></svg></span>
+        <h3>Считаем смету</h3>
+        <p>Менеджер подбирает материалы и присылает смету с количеством и ценами.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg></span>
+        <h3>Выбираете день</h3>
+        <p>Согласуем состав заказа и удобную дату доставки на объект.</p>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></span>
+        <h3>Получаете на участке</h3>
+        <p>Привозим материалы. Оплата и гарантия <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span>.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="voprosy">
+  <div class="wrap faq">
+    <div class="sec-head" style="margin:0">
+      <h2>Частые вопросы</h2>
+      <p>Если ответа нет, напишите нам: ответим в мессенджере.</p>
+    </div>
+    <div>
+      <details>
+        <summary>Как посчитать, сколько материала нужно?</summary>
+        <p>Достаточно размеров крыши, стен или длины забора. Если есть чертёж, пришлите его вместе с заявкой. Менеджер уточнит детали и пришлёт смету.</p>
+      </details>
+      <details>
+        <summary>Доставляете ли вы на объект?</summary>
+        <p>Условия доставки, регионы и стоимость <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+      </details>
+      <details>
+        <summary>Можно ли забрать самовывозом?</summary>
+        <p>Адрес склада и часы отгрузки <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+      </details>
+      <details>
+        <summary>Какая гарантия на материалы?</summary>
+        <p>Сроки и условия гарантии производителей <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+      </details>
+      <details>
+        <summary>Какие способы оплаты?</summary>
+        <p>Способы оплаты, предоплата, оплата для организаций <span class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contacts">
+  <div class="wrap">
+    <div id="kontakty">
+      <h2>Свяжитесь с нами</h2>
+      <dl class="contact-list">
+        <div><dt>Телефон</dt><dd><a href="tel:+78888888888" style="text-decoration:none">+7 (888) 888-88-88</a></dd></div>
+        <div><dt>Написать</dt><dd class="msgs">
+          <a class="msg" href="#">Telegram</a><a class="msg" href="#">MAX</a><a class="msg" href="#">ВКонтакте</a>
+        </dd><p class="mark" style="font-size:var(--text-sm);margin-top:8px">&lt;&lt;запросить у заказчика: в каких мессенджерах отвечаете быстрее всего и ссылки на аккаунты&gt;&gt;</p></div>
+        <div><dt>Адрес склада</dt><dd class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</dd></div>
+        <div><dt>Время работы</dt><dd class="mark">&lt;&lt;запросить у заказчика&gt;&gt;</dd></div>
+      </dl>
+    </div>
+    <form class="form-card" id="raschet2" novalidate>
+      <h3>Перезвоним и посчитаем</h3>
+      <div class="fields">
+        <div class="field full">
+          <label for="tel2">Телефон</label>
+          <input id="tel2" name="tel" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+        </div>
+        <label class="consent full">
+          <input type="checkbox" id="agree2" name="agree">
+          <span>Даю согласие на обработку персональных данных и принимаю <a href="politika.html">политику обработки данных</a>.</span>
+        </label>
+        <div class="field full">
+          <button class="btn" type="submit" id="send2" disabled>Отправить</button>
+          <p class="form-note" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Демонстрационный макет, не является официальным сайтом организации.<br>Реквизиты оператора (название, ИНН, адрес) <span class="mark" style="color:#E3C458">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+    <p><a href="politika.html">Политика обработки персональных данных</a></p>
+  </div>
+</footer>
+
+<script>
+/* Статическая страница без сервера: заявка не отправляется, форма показывает демо-ответ. */
+(function(){
+  function bind(formId, agreeId, sendId, telId){
+    var f=document.getElementById(formId), a=document.getElementById(agreeId),
+        b=document.getElementById(sendId), t=document.getElementById(telId),
+        n=f.querySelector('.form-note');
+    a.checked=false; b.disabled=true;
+    a.addEventListener('change',function(){ b.disabled=!a.checked; });
+    t.addEventListener('input',function(){
+      var d=t.value.replace(/\D/g,'').replace(/^8/,'7'); if(!d){t.value='';return;}
+      if(d[0]!=='7') d='7'+d; d=d.slice(0,11);
+      var s='+7'; if(d.length>1) s+=' ('+d.slice(1,4);
+      if(d.length>=4) s+=') '+d.slice(4,7); if(d.length>=7) s+='-'+d.slice(7,9); if(d.length>=9) s+='-'+d.slice(9,11);
+      t.value=s;
+    });
+    f.addEventListener('submit',function(e){
+      e.preventDefault(); n.className='form-note';
+      if(t.value.replace(/\D/g,'').length<11){ n.textContent='Введите телефон полностью.'; n.className='form-note err'; t.focus(); return; }
+      if(!a.checked){ n.textContent='Поставьте галочку согласия.'; n.className='form-note err'; return; }
+      n.textContent='Демо-режим: заявка не отправляется. В рабочей версии она придёт вам в Telegram.'; n.className='form-note ok';
+    });
+  }
+  bind('raschet','agree','send','tel');
+  bind('raschet2','agree2','send2','tel2');
+})();
+</script>
+</body>
+</html>
